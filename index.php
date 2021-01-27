@@ -5,7 +5,8 @@
  */
 
 // TODO Votre code ici.
-
+$alea = rand(0,50);
+echo "<div>$alea</div>";
 
 
 /**
@@ -13,7 +14,8 @@
  */
 
 // TODO Votre code ici.
-
+$alea = rand(50, getrandmax());
+echo "<p>$alea</p>";
 
 /**
  * 3. Générez un nombre aléatoire compris entre 0 et 50
@@ -22,7 +24,12 @@
  */
 
 // TODO Votre code ici.
-
+$alea = rand(0,50);
+if($alea < 25){
+    echo "<p>Vous avez gagné</p>";
+}else{
+    echo "<p>Vous avez perdu</p>";
+}
 
 /**
  * 4. Créez une fonction qui génère un nombre aléatoire compris entre $max et $min ( paramètres ).
@@ -31,8 +38,15 @@
  */
 
 // TODO Votre code ici.
-
-
+echo maxAndMin(-100, 300);
+function maxAndMin(Int $max, Int $min){
+    $alea = rand($min, $max);
+    if($alea < $max - 100){
+        maxAndMin($min, $max);
+    }else{
+        return $alea;
+    }
+}
 
 
 
